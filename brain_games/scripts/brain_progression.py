@@ -2,10 +2,11 @@ import random
 
 import prompt
 
-import math
+from brain_games.cli import welcome_user
 
 
-def progression():
+def main():
+    welcome_user()
     print('What number is missing in the progression?')
     for i in range(3):
         start = random.randint(0, 50)
@@ -38,7 +39,9 @@ def progression():
     print('Congratulations, Sam!')
 
 
-progression()
+if __name__ == '__main__':
+    main()
+
 
 
 

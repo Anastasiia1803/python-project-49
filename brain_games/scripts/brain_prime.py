@@ -2,6 +2,8 @@ import random
 
 import prompt
 
+from brain_games.cli import welcome_user
+
 
 def is_prime(x) -> bool:
     for i in range(2, x):
@@ -11,8 +13,9 @@ def is_prime(x) -> bool:
     return True
 
 
-def prime():
-    print('Welcome to the Brain Games!\nHello, Sam!\nAnswer "yes" if given number is prime. Otherwise answer "no".')
+def main():
+    welcome_user()
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
     j = random.randint(1, 10)
     print('Question:', j)
     answer = prompt.string('Your answer: ')
@@ -26,4 +29,6 @@ def prime():
     else:
         print('Incorrect!')
 
-prime()
+
+if __name__ == '__main__':
+    main()

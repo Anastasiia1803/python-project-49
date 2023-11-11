@@ -4,8 +4,11 @@ import prompt
 
 import math
 
+from brain_games.cli import welcome_user
 
-def gcd():
+
+def main():
+    welcome_user()
     print('Find the greatest common divisor of given numbers')
 
     for i in range(3):
@@ -21,4 +24,5 @@ def gcd():
         else:
             print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
 
-gcd()
+if __name__ == '__main__':
+    main()

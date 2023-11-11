@@ -2,8 +2,11 @@ import random
 
 import prompt
 
+from brain_games.cli import welcome_user
 
-def calc():
+
+def main():
+    welcome_user()
     print('What is the result of the expression?')
     operations = ['+', '-', '*']
 
@@ -26,5 +29,6 @@ def calc():
             print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'. Let's try again, Bill!")
 
 
+if __name__ == '__main__':
+    main()
 
-calc()
