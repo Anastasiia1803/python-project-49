@@ -6,7 +6,7 @@ from brain_games.cli import welcome_user
 
 
 def progression(name):
-    welcome_user()
+    count_correct_answer = 0
     print('What number is missing in the progression?')
     for i in range(3):
         start = random.randint(0, 50)
@@ -32,9 +32,10 @@ def progression(name):
 
         if answer == random_num:
             print('Correct!')
+            count_correct_answer = count_correct_answer + 1
         else:
             print(f"'{answer}' is wrong answer ;(. "
                   f"Correct answer was '{random_num}'.")
             print(f"Let's try again, {name}'!")
-
-    print(f'Congratulations, {name}!')
+    if count_correct_answer == 3:
+        print(f'Congratulations, {name}!')
