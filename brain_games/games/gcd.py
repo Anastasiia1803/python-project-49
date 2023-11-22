@@ -8,7 +8,7 @@ from brain_games.cli import welcome_user
 
 def gcd(name):
     count_correct_answer = 0
-    print('Find the greatest common divisor of given numbers')
+    print('Find the greatest common divisor of given numbers.')
 
     for i in range(3):
         random_number_1 = random.randint(1, 10)
