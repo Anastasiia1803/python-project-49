@@ -33,7 +33,7 @@ def progression(name):
             count_correct_answer = count_correct_answer + 1
         else:
             print(f"'{answer}' is wrong answer ;(. "
-                  f"Correct answer was '{random_num}'.")
-            print(f"Let's try again, {name}'!")
+                  f"Correct answer was '{random_num}'. Let's try again, {name}'!")
+            break
     if count_correct_answer == 3:
         print(f'Congratulations, {name}!')

@@ -20,7 +20,8 @@ def even(name):
             count_correct_answer = count_correct_answer + 1
         else:
             print(f"'{answer}' is wrong answer ;(. "
-                  f"Correct answer was '{correct_answer}'. Let's try again, {name}!")
+                  f"Correct answer was '{correct_answer}'. "
+                  f"Let's try again, {name}!")
             break
 
     if count_correct_answer == 3:
