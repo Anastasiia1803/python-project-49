@@ -3,8 +3,8 @@ from brain_games.games.gcd import gcd
 
 
 def main():
-    welcome_user()
-    gcd()
+    name = welcome_user()
+    gcd(name)
 
 
 if __name__ == '__main__':
