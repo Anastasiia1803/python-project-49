@@ -1,8 +1,6 @@
-from random import random
+import random
 
 import prompt
-
-from brain_games.cli import welcome_user
 
 
 def progression(name):

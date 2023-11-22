@@ -1,5 +1,5 @@
 import math
-from random import random
+import random
 
 import prompt
 
