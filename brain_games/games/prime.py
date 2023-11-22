@@ -13,7 +13,7 @@ def is_prime(x) -> bool:
     return True
 
 
-def prime():
+def prime(name):
     welcome_user()
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     j = random.randint(1, 10)

@@ -5,7 +5,7 @@ import prompt
 from brain_games.cli import welcome_user
 
 
-def progression():
+def progression(name):
     welcome_user()
     print('What number is missing in the progression?')
     for i in range(3):
@@ -35,6 +35,6 @@ def progression():
         else:
             print(f"'{answer}' is wrong answer ;(. "
                   f"Correct answer was '{random_num}'.")
-            print("Let's try again, Sam!")
+            print(f"Let's try again, {name}'!")
 
-    print('Congratulations, Sam!')
+    print(f'Congratulations, {name}!')

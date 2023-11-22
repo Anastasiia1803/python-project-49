@@ -3,8 +3,8 @@ from brain_games.games.even import even
 
 
 def main():
-    welcome_user()
-    even()
+    name = welcome_user()
+    even(name)
 
 
 if __name__ == '__main__':

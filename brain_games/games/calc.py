@@ -3,7 +3,7 @@ import random
 import prompt
 
 
-def calc():
+def calc(name):
     print('What is the result of the expression?')
     operations = ['+', '-', '*']
 
@@ -24,4 +24,4 @@ def calc():
             print('Correct!')
         else:
             print(f"'{answer}' is wrong answer ;(. Correct answer"
-                  f" was '{correct_answer}'. Let's try again, Bill!")
+                  f" was '{correct_answer}'. Let's try again, {name}!")

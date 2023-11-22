@@ -3,7 +3,7 @@ from brain_games.games.calc import calc
 
 
 def main():
-    welcome_user()
+    name = welcome_user()
     calc()
 
 
