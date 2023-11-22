@@ -4,6 +4,7 @@ import prompt
 
 
 def calc(name):
+    count_correct_answer = 0
     print('What is the result of the expression?')
     operations = ['+', '-', '*']
 
@@ -22,6 +23,10 @@ def calc(name):
 
         if answer == correct_answer:
             print('Correct!')
+            count_correct_answer = count_correct_answer + 1
         else:
             print(f"'{answer}' is wrong answer ;(. Correct answer"
                   f" was '{correct_answer}'. Let's try again, {name}!")
+
+    if count_correct_answer == 3:
+        print(f'Congratulations, {name}!')
