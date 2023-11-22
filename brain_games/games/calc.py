@@ -27,6 +27,7 @@ def calc(name):
         else:
             print(f"'{answer}' is wrong answer ;(. Correct answer"
                   f" was '{correct_answer}'. Let's try again, {name}!")
+            break
 
     if count_correct_answer == 3:
         print(f'Congratulations, {name}!')

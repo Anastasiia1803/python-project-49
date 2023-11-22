@@ -7,6 +7,7 @@ from brain_games.cli import welcome_user
 
 
 def gcd(name):
+    count_correct_answer = 0
     print('Find the greatest common divisor of given numbers')
 
     for i in range(3):
@@ -19,6 +20,10 @@ def gcd(name):
 
         if answer == correct_answer:
             print('Correct!')
+            count_correct_answer = count_correct_answer + 1
         else:
             print(f"'{answer}' is wrong answer ;(."
                   f" Correct answer was '{correct_answer}'. Let's try again, {name}!")
+            break
+    if count_correct_answer == 3:
+        print(f'Congratulations, {name}!')
