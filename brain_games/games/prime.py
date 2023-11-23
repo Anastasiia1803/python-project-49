@@ -30,6 +30,6 @@ def prime(name):
             print(f"'{answer}' is wrong answer ;(."
                   f" Correct answer was '{correct_answer}'. "
                   f"Let's try again, {name}!")
-            break
+            return
     if count_correct_answer == 3:
         print(f'Congratulations, {name}!')
