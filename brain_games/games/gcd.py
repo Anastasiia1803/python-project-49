@@ -3,8 +3,6 @@ import random
 
 import prompt
 
-from brain_games.cli import welcome_user
-
 
 def gcd(name):
     count_correct_answer = 0
