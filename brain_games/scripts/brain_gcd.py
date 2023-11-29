@@ -1,10 +1,9 @@
-from brain_games.cli import welcome_user
-from brain_games.games.gcd import gcd
+from brain_games.engine import run_game
+from brain_games.games.gcd import gcd, MANUAL
 
 
 def main():
-    name = welcome_user()
-    gcd(name)
+    run_game(manual=MANUAL, func_game=gcd)
 
 
 if __name__ == '__main__':
