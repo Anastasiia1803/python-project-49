@@ -20,4 +20,4 @@ def progression():
         c.append(str(x))
 
     h = ' '.join(c)
-    return h, correct_answer
+    return h, str(correct_answer)

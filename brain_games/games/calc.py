@@ -16,4 +16,4 @@ def calc():
     else:
         correct_answer = random_number_1 * random_number_2
 
-    return f'{random_number_1} {operation} {random_number_2}', correct_answer
+    return f'{random_number_1} {operation} {random_number_2}', str(correct_answer)
