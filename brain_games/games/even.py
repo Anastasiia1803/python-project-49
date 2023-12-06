@@ -1,6 +1,10 @@
 import random
+from brain_games.engine import run_game
+from brain_games.games.constants import MANUAL_EVEN
 
-MANUAL = 'Answer "yes" if the number is even, otherwise answer "no".'
+
+def run_even_game():
+    run_game(manual=MANUAL_EVEN, func_game=even)
 
 
 def even():

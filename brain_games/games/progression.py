@@ -1,6 +1,10 @@
 import random
+from brain_games.engine import run_game
+from brain_games.games.constants import MANUAL_PROGRESSION
 
-MANUAL = 'What number is missing in the progression?'
+
+def run_progression_game():
+    run_game(manual=MANUAL_PROGRESSION, func_game=progression)
 
 
 def progression():

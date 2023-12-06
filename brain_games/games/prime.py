@@ -1,6 +1,10 @@
 import random
+from brain_games.engine import run_game
+from brain_games.games.constants import MANUAL_PRIME
 
-MANUAL = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+
+def run_prime_game():
+    run_game(manual=MANUAL_PRIME, func_game=prime)
 
 
 def is_prime(x) -> bool:

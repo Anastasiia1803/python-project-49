@@ -1,11 +1,14 @@
 import random
+from brain_games.engine import run_game
+from brain_games.games.constants import OPERATIONS, MANUAL_CALC
 
-MANUAL = 'What is the result of the expression?'
+
+def run_calc_game():
+    run_game(manual=MANUAL_CALC, func_game=calculate)
 
 
-def calc():
-    operations = ['+', '-', '*']
-    operation = random.choice(operations)
+def calculate():
+    operation = random.choice(OPERATIONS)
     random_number_1 = random.randint(1, 30)
     random_number_2 = random.randint(1, 30)
 

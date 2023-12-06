@@ -1,26 +1,20 @@
 import prompt
 
+COUNT_GAMES = 3
+
 
 def run_game(manual, func_game):
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-    print(manual)
-    count_correct_answer = 0
-    for i in range(3):
-        res = func_game()
-        question = res[0]
-        correct_answer = res[1]
-        print(f'Question: {question}')
-        answer = prompt.string('Your answer: ')
-        if answer == correct_answer:
+    name = prompt.string('Welcome to the Brain Games!\nMay I have your name? ')
+    print(f'Hello, {name}!\n{manual}')
+    for _ in range(COUNT_GAMES):
+        question, correct_answer = func_game()
+        user_answer = prompt.string(f'Question: {question}\nYour answer: ')
+        if user_answer == correct_answer:
             print('Correct!')
-            count_correct_answer = count_correct_answer + 1
         else:
-            print(f"'{answer}' is wrong answer ;(. "
+            print(f"'{user_answer}' is wrong answer ;(. "
                   f"Correct answer was '{correct_answer}'. "
                   f"Let's try again, {name}!")
-            break
+            return
 
-        if count_correct_answer == 3:
-            print(f'Congratulations, {name}!')
+    print(f'Congratulations, {name}!')
