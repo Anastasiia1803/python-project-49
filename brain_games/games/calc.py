@@ -25,4 +25,4 @@ def calculate(operation, number_1, number_2):
 
 
 def run_calc_game():
-    run_game(manual=MANUAL_CALC, func_game=calculate)
+    run_game(manual=MANUAL_CALC, func_game=get_result_calculate)
