@@ -1,10 +1,11 @@
-
 from brain_games.engine import run_game
 from brain_games.games.constants import MANUAL_PRIME
 from brain_games.games.utils import get_random_number
 
 
 def is_prime(x) -> bool:
+    if x <= 1:
+        return False
     for i in range(2, x):
         if x % i == 0:
             return False
