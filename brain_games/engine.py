@@ -1,13 +1,13 @@
 import prompt
-from brain_games.games.constants import (
+from brain_games.constants import (
     WELCOME_MESSAGE, QUESTION_MESSAGE, INSTRUCTION)
 
 COUNT_GAMES = 3
 
 
-def run_game(manual, func_game):
+def get_question_and_answer(manual, func_game):
     name = prompt.string(WELCOME_MESSAGE)
-    print(f'Hello, {name}!\n{manual}')
+    print(f'Hello, {name}!', f'{manual}', sep='\n')
     for _ in range(COUNT_GAMES):
         question, correct_answer = func_game()
         user_answer = prompt.string(QUESTION_MESSAGE.format(question))

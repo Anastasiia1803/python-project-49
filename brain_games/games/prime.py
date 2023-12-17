@@ -1,5 +1,5 @@
-from brain_games.engine import run_game
-from brain_games.games.constants import MANUAL_PRIME
+from brain_games.engine import get_question_and_answer
+from brain_games.constants import MANUAL_PRIME
 from brain_games.games.utils import get_random_number
 
 
@@ -13,15 +13,14 @@ def is_prime(x) -> bool:
     return True
 
 
-def get_result_prime():
-    j = get_random_number(to_num=10)
-    if is_prime(j):
-        correct_answer = 'yes'
-    else:
-        correct_answer = 'no'
-
-    return j, correct_answer
+def get_num_and_prime_answer():
+    number = get_random_number(to_num=10)
+    correct_answer = 'yes' if is_prime(number) else 'no'
+    return number, correct_answer
 
 
 def run_prime_game():
-    run_game(manual=MANUAL_PRIME, func_game=get_result_prime)
+    get_question_and_answer(
+        manual=MANUAL_PRIME,
+        func_game=get_num_and_prime_answer
+    )
